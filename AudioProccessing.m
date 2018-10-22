@@ -3,7 +3,7 @@
  %Lop: Dien tu 09
  %Khoa: 60
  
- %file ghi am orig_input san, tao giai dieu melodi 
+ %file ghi am orig_input san, tao giai dieu melody
  fs = 44100;
  t = 1 : 1/fs : 1.5;
  f = 440;
@@ -27,6 +27,7 @@
  a2=a1(1:length(s));
  m = s + a2;
  sound(m,fs);
+ audiowrite('melody.wav', m, fs);
  
  %fft 
  N=fs;
